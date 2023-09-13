@@ -18,18 +18,17 @@
 
 <template>
     <div>
-        <nav class="flex items-center justify-between p-6 bg-blue-800"></nav>
+        <!-- <nav class="flex items-center justify-between p-6 bg-gray-800"></nav> -->
         <div class="flex min-h-screen">
-            <div id="sidebar" class="bg-blue-900 p-6 duration-500" :class="width" style="position: relative;">
+            <div id="sidebar" class="bg-gray-900 p-6 duration-500" :class="width" style="position: relative;">
                 <button class="text-xl text-gray-600" @click="toggleWidth" style="position: absolute; right: 10px; top:10px">
-                    <i class="fa-solid fa-bars text-blue-500"></i>
+                    <i class="fa-solid fa-bars text-gray-500"></i>
                 </button>
-                <div id="branding" :hidden="hide">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8ABH2lareRUW9kf_IvBwhkD-9DRIOLeXIA&usqp=CAU" alt="Logo"
+                <div id="branding" :hidden="hide" class="my-6">
+                    <img src="assets/N.png" alt="Logo"
                         class="w-[170px] h-[170px] mx-auto rounded-full object-cover">
-                    <h1 class="text-3xl text-center text-blue-300 my-6">Clients</h1>
                 </div>
-                <hr class="border-blue-600" :hidden="hide">
+                <hr class="border-gray-600" :hidden="hide">
                 <MainNav :hidden="hide"></MainNav>
             </div>
 

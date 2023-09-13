@@ -7,14 +7,11 @@ const { hidden } = defineProps(['hidden']);
 
 <template>
   <div class="main-nav">
-    <Link href="/dashboard">
+    <Link :href="route('dashboard')" :active="route().current('dashboard')">
       <i class="fa fa-home"></i> <span :hidden="hidden">Dashboard</span>
     </Link>
     <Link :href="route('clients')" :active="route().current('clients')">
-        <i class="fa-solid fa-address-card"></i> <span :hidden="hidden">Clients</span>
-    </Link>
-    <Link href="/profile">
-      <i class="fa-solid fa-user"></i> <span :hidden="hidden">Profile</span>
+        <i class="fa-solid fa-address-card"></i> <span :hidden="hidden">Clients List</span>
     </Link>
   </div>
 </template>

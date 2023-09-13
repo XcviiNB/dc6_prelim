@@ -11,7 +11,7 @@ class ClientController extends Controller
         $clients = Client::get();
 
         return inertia('Clients/Index', [
-            'clients' => Client::paginate(10)->through(fn($client) =>[
+            'clients' => Client::paginate(12)->through(fn($client) =>[
                 'id' => $client->id,
                 'last_name' =>$client->last_name,
                 'first_name' =>$client->first_name,
