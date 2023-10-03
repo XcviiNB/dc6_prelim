@@ -13,5 +13,8 @@ const { hidden } = defineProps(['hidden']);
     <Link :href="route('clients')" :active="route().current('clients')">
         <i class="fa-solid fa-address-card"></i> <span :hidden="hidden">Clients List</span>
     </Link>
+    <Link v-if="$page.props.auth.user.roles.includes('supplier')" :href="route('supplies')" :active="route().current('supplies')">
+        <i class="fa-solid fa-address-card"></i> <span :hidden="hidden">Supplies</span>
+    </Link>
   </div>
 </template>
